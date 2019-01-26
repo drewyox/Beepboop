@@ -1,3 +1,9 @@
 #result {
   display: none;
 }
+
+.result {
+  text-align: left;
+  font-weight: bold;
+
+}
