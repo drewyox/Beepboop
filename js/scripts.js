@@ -29,49 +29,21 @@ function beepboop(numberInput) {
   });
 };
 
-
-
-      // Figure out how to print the array as seperate points within a list, or include a page break or anything really
-
-
-// Research the functionality of nested if statements, code feels redundant here. Surely there is a more efficient way to isolate how this works. Maybe try reversing the order of the if statements as the Beeps seem to be dominant while in the top of the if else argument. ((UPDATE)) rewrote code to have include 3 at the top and it works as intended now without the wildly inefficient && statements. 
-
-    // if (numString.includes("1") === true && numString.includes("2") === false && numString.includes("3") === false ) {
-    //     results.push("Beep ");
-    //   }
-    // else if (numString.includes("2")===true && numString.includes("3")===false) {
-    //       results.push("Boop ");
-    //   }
-    // else if (numString.includes("3")){
-    //         results.push("I'm sorry Dave, I cant let you do that ");
-    //   }
-    // else {
-    //   results.push(numString + " ");
-    //
-    //
-    //
-    //   if (numString.includes("1") === true && numString.includes("2") === false && numString.includes("3") === false ) {
-    //       results.push("Beep ");
-    //     }
-    //   else if (numString.includes("2")===true && numString.includes("3")===false) {
-    //         results.push("Boop ");
-    //     }
-    //   else if (numString.includes("3")){
-    //           results.push("I'm sorry Dave, I cant let you do that ");
-    //     }
-    //   else {
-    //     results.push(numString + " ");
-
-
-
-
 $(document).ready(function() {
   $("#formOne").submit(function(event) {
       var numberInput = $("input#number").val();
       beepboop(numberInput);
+
+      var ul = document.createElement('ul');
+      document.getElementById('result').appendChild(ul);
+      results.forEach(function(resultsElement){
+        var li = document.createElement('li');
+        ul.appendChild(li);
+        li.innerHTML += resultsElement;
+      });
+
       $("#result").show();
       $("#formOne").hide();
-      $(".result").text(results);
       event.preventDefault();
     });
   });
