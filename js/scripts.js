@@ -3,11 +3,11 @@
 // Think about specs of this function, and how I can realte those back to what is needed for the assaignment. Ask about specs too, they seem to create a harder time rather than illuminating how to code more efficiently.
 
 
-var numbers = [];
-var results = [];
 
 
 function beepboop(numberInput) {
+  var numbers = [];
+  var results = [];
   for (var i = 0; i <= numberInput; i++) {
     numbers.push(i);};
 
@@ -27,13 +27,13 @@ function beepboop(numberInput) {
       results.push(numString + " ");
     };
   });
+  return results;
 };
 
 $(document).ready(function() {
   $("#formOne").submit(function(event) {
       var numberInput = $("input#number").val();
-      beepboop(numberInput);
-
+      var results = beepboop(numberInput);
       var ul = document.createElement('ul');
       document.getElementById('result').appendChild(ul);
       results.forEach(function(resultsElement){
@@ -41,7 +41,6 @@ $(document).ready(function() {
         ul.appendChild(li);
         li.innerHTML += resultsElement;
       });
-
       $("#result").show();
       $("#formOne").hide();
       event.preventDefault();
