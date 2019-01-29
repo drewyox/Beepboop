@@ -7,3 +7,22 @@
   font-weight: bold;
 
 }
+
+body {
+  color:#00ff41;
+  font-family: "Lucida Console", Monaco, monospace;
+  background-image: url("../img/matrix.jpg");
+}
+
+.container {
+  background-color: black;
+  padding-bottom: 100px;
+}
+
+.jumbotron {
+  background-color: #3e3e3e;
+}
+
+.btn {
+  background-color: #3e3e3e;
+}

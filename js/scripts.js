@@ -34,15 +34,8 @@ $(document).ready(function() {
   $("#formOne").submit(function(event) {
       var numberInput = $("input#number").val();
       var results = beepboop(numberInput);
-      var ul = document.createElement('ul');
-      document.getElementById('result').appendChild(ul);
-      results.forEach(function(resultsElement){
-        var li = document.createElement('li');
-        ul.appendChild(li);
-        li.innerHTML += resultsElement;
-      });
       $("#result").show();
-      $("#formOne").hide();
+      $(".result").text(results);
       event.preventDefault();
     });
   });
