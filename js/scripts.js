@@ -1,10 +1,3 @@
-// retry this whole section of code. Doesnt seem to format well with getting it to display vertically. Maybe has to do with how the array is being called? Or perhaps with how the array elements are being created?
-
-// Think about specs of this function, and how I can realte those back to what is needed for the assaignment. Ask about specs too, they seem to create a harder time rather than illuminating how to code more efficiently.
-
-
-
-
 function beepboop(numberInput) {
   var numbers = [];
   var results = [];
@@ -33,6 +26,7 @@ function beepboop(numberInput) {
 $(document).ready(function() {
   $("#formOne").submit(function(event) {
       var numberInput = $("input#number").val();
+      $("input#number").val("");
       var results = beepboop(numberInput);
       $("#result").show();
       $(".result").text(results);
